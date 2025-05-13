@@ -1,0 +1,147 @@
+.navbar {
+  background-color: var(--surface);
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+}
+
+.navbar-links a {
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--secondary);
+}
+
+.navbar-wallet {
+  display: flex;
+  align-items: center;
+}
+
+.wallet-connected {
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-lg);
+}
+
+.wallet-address {
+  font-family: monospace;
+  margin-right: 1rem;
+}
+
+.btn-disconnect {
+  background-color: transparent;
+  color: var(--error);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--error);
+  font-size: 0.8rem;
+}
+
+.btn-disconnect:hover {
+  background-color: var(--error);
+  color: var(--text-primary);
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.toggle-bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-primary);
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--surface);
+    transition: right 0.3s ease;
+    padding: 2rem 1rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-menu.active {
+    right: 0;
+  }
+  
+  .navbar-links {
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .navbar-links li {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  
+  .navbar-toggle {
+    display: flex;
+  }
+  
+  .toggle-bar.active:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .toggle-bar.active:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .toggle-bar.active:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+} 

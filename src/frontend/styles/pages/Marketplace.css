@@ -1,0 +1,347 @@
+/**
+ * Marketplace Page Styles
+ */
+
+/* Page Layout */
+.marketplace-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Marketplace Header */
+.marketplace-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.marketplace-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.marketplace-header p {
+  font-size: 1.125rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Search and Controls */
+.marketplace-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.marketplace-search {
+  display: flex;
+  flex: 1;
+  max-width: 700px;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+}
+
+.filter-toggle-btn {
+  white-space: nowrap;
+}
+
+/* Filter Panel */
+.filter-panel {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 500;
+  color: #555;
+  font-size: 0.875rem;
+}
+
+.sort-select {
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 0.75rem;
+  background-color: white;
+  color: #333;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
+}
+
+.filter-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* NFT Grid */
+.nft-grid-container {
+  min-height: 400px;
+}
+
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.nft-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.nft-link:hover {
+  transform: translateY(-5px);
+}
+
+.nft-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.nft-image {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.nft-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.nft-card:hover .nft-image img {
+  transform: scale(1.05);
+}
+
+.nft-details {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.nft-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.nft-collection {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.nft-price {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.price-label {
+  color: #777;
+}
+
+.price-value {
+  font-weight: 600;
+  color: #6c63ff;
+}
+
+/* Loading States */
+.marketplace-loader,
+.marketplace-error,
+.marketplace-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.marketplace-error p,
+.marketplace-empty p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.marketplace-empty h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination-info {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.pagination-total {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .marketplace-header h1 {
+    color: #f8f9fa;
+  }
+  
+  .marketplace-header p {
+    color: #adb5bd;
+  }
+  
+  .filter-panel {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .filter-group label {
+    color: #e2e2e2;
+  }
+  
+  .sort-select {
+    background-color: #333;
+    border-color: #444;
+    color: #e2e2e2;
+  }
+  
+  .sort-select:focus {
+    border-color: #8f88ff;
+    box-shadow: 0 0 0 2px rgba(143, 136, 255, 0.2);
+  }
+  
+  .nft-name {
+    color: #e2e2e2;
+  }
+  
+  .nft-collection {
+    color: #adb5bd;
+  }
+  
+  .price-label {
+    color: #9e9e9e;
+  }
+  
+  .marketplace-empty h3 {
+    color: #e2e2e2;
+  }
+  
+  .marketplace-error p,
+  .marketplace-empty p {
+    color: #adb5bd;
+  }
+  
+  .pagination-info {
+    color: #adb5bd;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .marketplace-header h1 {
+    font-size: 2rem;
+  }
+  
+  .marketplace-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .marketplace-search {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .filter-toggle-btn {
+    width: 100%;
+  }
+  
+  .nft-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .marketplace-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-panel {
+    padding: 1rem;
+  }
+  
+  .filter-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .nft-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .nft-details {
+    padding: 0.75rem;
+  }
+  
+  .nft-name {
+    font-size: 1rem;
+  }
+} 
