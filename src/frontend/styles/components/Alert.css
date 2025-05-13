@@ -1,0 +1,153 @@
+.alert {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  position: relative;
+  border-left: 4px solid;
+}
+
+.alert-icon {
+  margin-right: 0.75rem;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.alert-message {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.alert-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: inherit;
+  opacity: 0.7;
+  padding: 0.25rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert-close:hover {
+  opacity: 1;
+}
+
+/* Alert variations */
+.alert-info {
+  background-color: rgba(var(--info-rgb), 0.1);
+  border-left-color: var(--info);
+  color: var(--text-primary);
+}
+
+.alert-success {
+  background-color: rgba(var(--success-rgb), 0.1);
+  border-left-color: var(--success);
+  color: var(--text-primary);
+}
+
+.alert-warning {
+  background-color: rgba(var(--warning-rgb), 0.1);
+  border-left-color: var(--warning);
+  color: var(--text-primary);
+}
+
+.alert-error {
+  background-color: rgba(var(--error-rgb), 0.1);
+  border-left-color: var(--error);
+  color: var(--text-primary);
+}
+
+/* Alert with actions */
+.alert-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.alert-action {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary);
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.alert-action:hover {
+  opacity: 0.8;
+}
+
+/* Alert with outline style */
+.alert-outlined {
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.alert-outlined.alert-info {
+  border-color: var(--info);
+}
+
+.alert-outlined.alert-success {
+  border-color: var(--success);
+}
+
+.alert-outlined.alert-warning {
+  border-color: var(--warning);
+}
+
+.alert-outlined.alert-error {
+  border-color: var(--error);
+}
+
+/* Alert animation */
+@keyframes alert-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-animated {
+  animation: alert-slide-in 0.3s ease forwards;
+}
+
+/* Toast alerts (positioned at the top of the screen) */
+.alert-toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.alert-toast-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+} 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="200" viewBox="0 0 500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background shapes -->
+  <rect width="500" height="200" rx="20" fill="#1A1B26" />
+  <circle cx="130" cy="100" r="70" fill="#4F46E5" opacity="0.1" />
+  <circle cx="380" cy="60" r="40" fill="#6C63FF" opacity="0.1" />
+  
+  <!-- Cat Silhouette -->
+  <path d="M150 80C150 80 160 70 175 75C190 80 195 95 195 95C195 95 205 85 215 90C225 95 230 110 230 110L220 140L200 150L180 145L160 130L150 110V80Z" fill="#6C63FF" />
+  <path d="M180 95C180 95 190 85 195 95C200 105 195 120 195 120" stroke="#4F46E5" stroke-width="2" />
+  
+  <!-- Cat ears -->
+  <path d="M150 80L135 50L150 70V80Z" fill="#6C63FF" />
+  <path d="M150 80L165 45L155 70L150 80Z" fill="#6C63FF" />
+  
+  <!-- Cat tail -->
+  <path d="M160 130C160 130 140 140 130 135C120 130 110 115 110 115C110 115 105 105 110 100" stroke="#6C63FF" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- Cat eyes -->
+  <circle cx="165" cy="95" r="4" fill="#1A1B26" />
+  <circle cx="185" cy="95" r="4" fill="#1A1B26" />
+  
+  <!-- Cat whiskers -->
+  <line x1="167" y1="105" x2="147" y2="100" stroke="#1A1B26" stroke-width="1" />
+  <line x1="167" y1="107" x2="147" y2="107" stroke="#1A1B26" stroke-width="1" />
+  <line x1="167" y1="109" x2="147" y2="114" stroke="#1A1B26" stroke-width="1" />
+  <line x1="183" y1="105" x2="203" y2="100" stroke="#1A1B26" stroke-width="1" />
+  <line x1="183" y1="107" x2="203" y2="107" stroke="#1A1B26" stroke-width="1" />
+  <line x1="183" y1="109" x2="203" y2="114" stroke="#1A1B26" stroke-width="1" />
+  
+  <!-- Text -->
+  <path d="M250 80L260 80L270 100L280 80L290 80L290 120L280 120L280 95L270 115L260 95L260 120L250 120L250 80Z" fill="white" />
+  <path d="M295 80L325 80L325 90L315 90L315 120L305 120L305 90L295 90L295 80Z" fill="white" />
+  <path d="M330 80L340 80L340 120L330 120L330 80Z" fill="white" />
+  <path d="M345 80L355 80L355 110L375 110L375 120L345 120L345 80Z" fill="white" />
+  <path d="M380 80L390 80L390 120L380 120L380 80Z" fill="white" />
+  <path d="M395 80L425 80L425 90L415 90L415 120L405 120L405 90L395 90L395 80Z" fill="white" />
+  
+  <!-- NFT Text -->
+  <text x="280" y="145" font-family="Arial, sans-serif" font-size="20" fill="#6C63FF" font-weight="bold">NFT MARKETPLACE</text>
+</svg> 

@@ -1,0 +1,358 @@
+/**
+ * Create NFT Page Styles
+ */
+
+/* Page Layout */
+.create-nft-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.create-nft-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.create-nft-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.create-nft-header p {
+  font-size: 1.125rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form Layout */
+.create-nft-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 2fr;
+  gap: 2rem;
+}
+
+/* Image Upload */
+.image-upload-section {
+  position: relative;
+}
+
+.image-upload-area {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f8f9fa;
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.image-upload-area:hover {
+  border-color: #6c63ff;
+  background-color: #f3f4ff;
+}
+
+.image-upload-area.has-error {
+  border-color: #ff4c4c;
+  background-color: #fff4f4;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.upload-icon {
+  margin-bottom: 1rem;
+  color: #777;
+}
+
+.upload-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.upload-hint {
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.file-input {
+  display: none;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/* Form Fields */
+.form-fields-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.textarea-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 0.2s;
+}
+
+.textarea-input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.textarea-input.error {
+  border-color: #ff4c4c;
+}
+
+/* Attributes */
+.attributes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.attribute-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.attribute-inputs {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.attribute-input {
+  flex: 1;
+  height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.attribute-input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.attribute-remove {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #666;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribute-remove:hover {
+  color: #d32f2f;
+  background-color: rgba(211, 47, 47, 0.1);
+}
+
+.attribute-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-attribute-button {
+  background: none;
+  border: 1px dashed #aaa;
+  border-radius: 6px;
+  padding: 0.75rem;
+  cursor: pointer;
+  color: #666;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.add-attribute-button:hover {
+  background-color: #f3f4ff;
+  border-color: #6c63ff;
+  color: #6c63ff;
+}
+
+/* Submission Error */
+.submission-error {
+  background-color: #fff4f4;
+  border-left: 3px solid #ff4c4c;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+.submission-error p {
+  color: #d32f2f;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.loading-text {
+  margin-right: 0.5rem;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .create-nft-header h1 {
+    color: #f8f9fa;
+  }
+  
+  .create-nft-header p {
+    color: #adb5bd;
+  }
+  
+  .image-upload-area {
+    background-color: #2a2a2a;
+    border-color: #444;
+  }
+  
+  .image-upload-area:hover {
+    border-color: #8f88ff;
+    background-color: #32323d;
+  }
+  
+  .image-upload-area.has-error {
+    border-color: #ff6b6b;
+    background-color: #3d2c2c;
+  }
+  
+  .upload-text {
+    color: #e2e2e2;
+  }
+  
+  .upload-hint,
+  .upload-icon {
+    color: #adb5bd;
+  }
+  
+  .form-label {
+    color: #e2e2e2;
+  }
+  
+  .textarea-input,
+  .attribute-input {
+    background-color: #333;
+    border-color: #444;
+    color: #e2e2e2;
+  }
+  
+  .textarea-input:focus,
+  .attribute-input:focus {
+    border-color: #8f88ff;
+  }
+  
+  .textarea-input.error {
+    border-color: #ff6b6b;
+  }
+  
+  .attribute-remove {
+    color: #adb5bd;
+  }
+  
+  .attribute-remove:hover {
+    color: #ff6b6b;
+    background-color: rgba(255, 107, 107, 0.1);
+  }
+  
+  .add-attribute-button {
+    border-color: #555;
+    color: #adb5bd;
+  }
+  
+  .add-attribute-button:hover {
+    background-color: #32323d;
+    border-color: #8f88ff;
+    color: #8f88ff;
+  }
+  
+  .submission-error {
+    background-color: rgba(255, 107, 107, 0.1);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .create-nft-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-upload-section {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .create-nft-header h1 {
+    font-size: 2rem;
+  }
+  
+  .attribute-inputs {
+    flex-direction: column;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    width: 100%;
+  }
+} 
