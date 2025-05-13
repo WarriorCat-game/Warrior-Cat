@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/images/warrior-cat-logo.png" alt="Warrior Cat Logo" width="500">
+  <img src="assets/images/logo.png" alt="Warrior Cat Logo" width="500">
   <h3>Collect, Trade, and Battle with Unique Warrior Cats on the Blockchain</h3>
 </div>
 
