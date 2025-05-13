@@ -1,0 +1,5 @@
+credential.helper=manager
+user.email=nlxptzpsli63@hotmail.com
+user.name=WarriorCat-game
+http.sslverify=false
+core.sshcommand=ssh -i './ssh/project_key' 
